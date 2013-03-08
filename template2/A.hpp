@@ -1,5 +1,6 @@
 #pragma once
 #include "linalg.hpp"
+#include "det1.hpp"
 
 class A
 {
