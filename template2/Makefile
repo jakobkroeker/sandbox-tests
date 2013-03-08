@@ -1,4 +1,4 @@
-# no implicit template instanciations 
+# no implicit template instantiations 
 #
 # idea from: https://www.cs.washington.edu/education/courses/326/02wi/templates.htm
 
@@ -15,13 +15,13 @@ CXXFLAGSIMPLICIT += --std=gnu++0x
 
 all: main
 
-main : main.o  linalg-instanciations.o external-templates-instanciation.o 
+main : main.o  linalg-instantiations.o external-templates-instantiation.o 
 
-external-templates-instanciation.o:  external-templates-instanciation.cpp 
-	$(CC) $(CPPFLAGS) $(CXXFLAGS) -frepo -c external-templates-instanciation.cpp 
+external-templates-instantiation.o:  external-templates-instantiation.cpp 
+	$(CC) $(CPPFLAGS) $(CXXFLAGS) -frepo -c external-templates-instantiation.cpp 
 
-linalg-instanciations.o:  linalg.hpp linalg-C.cpp C.hpp linalg-instanciations.cpp 
-	$(CC) $(CPPFLAGS) $(CXXFLAGS) -c linalg-instanciations.cpp 
+linalg-instantiations.o:  linalg.hpp linalg-C.cpp C.hpp linalg-instantiations.cpp 
+	$(CC) $(CPPFLAGS) $(CXXFLAGS) -c linalg-instantiations.cpp 
 
 clean: 
 	rm -rf *.o main *.rpo
