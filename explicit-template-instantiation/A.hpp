@@ -21,6 +21,12 @@ public:
     return LinAlg<T>::rank(mValue);
     //return mValue.rank(); // trouble with this one: we want to specialize the rank method for various T
   }
+  
+  B<T>& operator=(const B<T>&m)
+  {
+     std::cerr << "error: called assignment operatior"<< std::endl ;
+     return *this;
+  }
 
   int det() {
     return det1(mValue);
